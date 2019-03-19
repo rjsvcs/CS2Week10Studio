@@ -9,6 +9,13 @@ public class Time {
         this.calendar = calendar;
     }
 
+    public Time(int hours, int minutes, int seconds) {
+        this(Calendar.getInstance());
+        calendar.set(Calendar.HOUR_OF_DAY, hours);
+        calendar.set(Calendar.MINUTE, minutes);
+        calendar.set(Calendar.SECOND, seconds);
+    }
+
     public int getHours() {
         return calendar.get(Calendar.HOUR_OF_DAY);
     }
