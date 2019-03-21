@@ -9,35 +9,26 @@ import naptimer.SimpleNapTimer;
  * example of polling.
  */
 public class InsomniacNapper {
-    /**
-     * The {@link NapTimer} being used to wake the napper.
-     */
-    private final NapTimer timer;
-
-    /**
-     * Creates a new InsomniacNapper with the specified {@link NapTimer}.
-     *
-     * @param timer The {@link NapTimer} used to wake this napper up.
-     */
-    public InsomniacNapper(NapTimer timer) {
-        this.timer = timer;
-    }
 
     /**
      * Checks to see if the alarm has started ringing once every second. This
      * results in lots of lost sleep!
      */
-    public void sleep() {
+    public void goToSleep(NapTimer timer, int durationInSeconds) {
+        timer.setAlarm(durationInSeconds);
+        System.out.println("Insomniac tries to go to sleep...");
         while(!timer.isRinging()) {
-            System.out.println("Woke up...alarm not ringing...going back " +
-                    "to sleep...");
+            System.out.println("Insomniac woke up to check the alarm, " +
+                    "but it's not ringing yet...");
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
                 // squash
             }
         }
-        System.out.println("ALARM IS RINGING! I'M AWAKE!");
+        System.out.println("The alarm is going off!");
+        System.out.println("Insomniac says: \"Alright. Fine. I'm Up.\"");
+        timer.turnOff();
     }
 
     /**
@@ -52,9 +43,7 @@ public class InsomniacNapper {
         thread.setDaemon(true);
         thread.start();
 
-        timer.setAlarm(4);
-
-        InsomniacNapper napper = new InsomniacNapper(timer);
-        napper.sleep();
+        InsomniacNapper napper = new InsomniacNapper();
+        napper.goToSleep(timer, 10);
     }
 }
