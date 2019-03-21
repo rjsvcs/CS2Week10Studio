@@ -14,17 +14,17 @@ public class NapTimerEvent {
     /**
      * The initial delay that was set on the {@link NapTimer}.
      */
-    private final long initialDelay;
+    private final long alarmTime;
 
     /**
      * Creates a new {@link NapTimerEvent} with the specified alarm and delay.
      *
      * @param timer The {@link NapTimer} that has raised an alarm.
-     * @param initialDelay The initial delay that was set on the timer.
+     * @param alarmTime The time that the alarm was raised (in milliseconds).
      */
-    public NapTimerEvent(NapTimer timer, long initialDelay) {
+    public NapTimerEvent(NapTimer timer, long alarmTime) {
         this.timer = timer;
-        this.initialDelay = initialDelay;
+        this.alarmTime = alarmTime;
     }
 
     /**
@@ -37,11 +37,11 @@ public class NapTimerEvent {
     }
 
     /**
-     * Returns the initial delay to which the timer was set in milliseconds.
+     * Returns the time that the alarm was raised in milliseconds.
      *
-     * @return The initial delay to which the timer was set in milliseconds.
+     * @return The time that the alarm was raised in milliseconds.
      */
-    public long getInitialDelay() {
-        return initialDelay;
+    public long getAlarmTime() {
+        return alarmTime;
     }
 }

@@ -58,7 +58,6 @@ public class InsomniacNapper implements Runnable {
 
         timer.setAlarm(hours, minutes, seconds);
 
-        InsomniacNapper napper = new InsomniacNapper(timer);
-        new Thread(napper).start();
+        new Thread(new InsomniacNapper(timer)).start();
     }
 }

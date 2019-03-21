@@ -25,11 +25,6 @@ public class NapTimer implements Runnable {
     private static final long HOUR = MINUTE * 60;
 
     /**
-     * The initial delay to which the most recent alarm was set.
-     */
-    private long initialDelay;
-
-    /**
      * The time at which the alarm will be raised (or 0 if there is no alarm).
      */
     private long alarmTime;
@@ -71,7 +66,6 @@ public class NapTimer implements Runnable {
     public synchronized void turnOff() {
         ringing = false;
         alarmTime = 0;
-        initialDelay = 0;
         notify();
     }
 
@@ -83,17 +77,10 @@ public class NapTimer implements Runnable {
      * @param seconds The number of minutes to delay the alarm.
      */
     public synchronized void setAlarm(int hours, int minutes, int seconds) {
-        this.initialDelay = hours * HOUR + minutes * MINUTE + seconds * SECOND;
-        alarmTime = System.currentTimeMillis() + initialDelay;
+        long delay = hours * HOUR + minutes * MINUTE + seconds * SECOND;
+        alarmTime = System.currentTimeMillis() + delay;
         ringing = false;
         notify();
-    }
-
-    /**
-     * Snoozes the alarm.
-     */
-    public synchronized void snooze() {
-        setAlarm(0, 0, 9);
     }
 
     /**
@@ -106,7 +93,7 @@ public class NapTimer implements Runnable {
     public synchronized void run() {
         while(true) {
             // check to make sure that the alarm has been set
-            while(initialDelay == 0) {
+            while(alarmTime <= System.currentTimeMillis()) {
                 try {
                     wait();
                 } catch (InterruptedException e) {
@@ -122,14 +109,12 @@ public class NapTimer implements Runnable {
                 }
             }
 
-            if(initialDelay > 0) {
-                NapTimerEvent event = new NapTimerEvent(this, initialDelay);
+            if(alarmTime > 0) {
+                NapTimerEvent event = new NapTimerEvent(this, alarmTime);
                 // set the alarm to ring
                 ringing = true;
                 // reset alarmTime to 0
                 alarmTime = 0;
-                // reset the alarm
-                initialDelay = 0;
 
                 // notify listeners
                 for(NapTimerObserver listener : registeredListeners) {
