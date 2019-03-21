@@ -1,5 +1,8 @@
 package naps;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * A timer for naps. Can be set to delay for a certain number of hours,
  * minutes and seconds. The timer is the Subject in the Observer design
@@ -32,11 +35,44 @@ public class NapTimer implements Runnable {
     private long alarmTime;
 
     /**
+     * Flag that indicates whether or not the alarm is currently ringing.
+     */
+    private boolean ringing;
+
+    // OBSERVER PATTERN STUFF
+
+    /**
+     * The NapTimer is the Subject in the Observer Design Pattern.
+     * {@link NapTimerListener} defines the interface for Observers. This set
+     * keeps track of the registered Observers.
+     */
+    private final Set<NapTimerListener> registeredListeners;
+
+    /**
      * Creates a new {@link NapTimer}.
      */
     public NapTimer() {
-        initialDelay = 0;
+        registeredListeners = new HashSet<>();
+        turnOff();
+    }
+
+    /**
+     * Used to check to see if the alarm is currently going off.
+     *
+     * @return True if the alarm is ringing, false otherwise.
+     */
+    public synchronized boolean isRinging() {
+        return ringing;
+    }
+
+    /**
+     * Turns the alarm off.
+     */
+    public synchronized void turnOff() {
+        ringing = false;
         alarmTime = 0;
+        initialDelay = 0;
+        notify();
     }
 
     /**
@@ -49,7 +85,15 @@ public class NapTimer implements Runnable {
     public synchronized void setAlarm(int hours, int minutes, int seconds) {
         this.initialDelay = hours * HOUR + minutes * MINUTE + seconds * SECOND;
         alarmTime = System.currentTimeMillis() + initialDelay;
+        ringing = false;
         notify();
+    }
+
+    /**
+     * Snoozes the alarm.
+     */
+    public synchronized void snooze() {
+        setAlarm(0, 0, 0);
     }
 
     /**
@@ -62,7 +106,7 @@ public class NapTimer implements Runnable {
     public synchronized void run() {
         while(true) {
             // check to make sure that the alarm has been set
-            if(alarmTime == 0) {
+            while(initialDelay == 0) {
                 try {
                     wait();
                 } catch (InterruptedException e) {
@@ -78,10 +122,45 @@ public class NapTimer implements Runnable {
                 }
             }
 
-            // send event
+            if(initialDelay > 0) {
+                // set the alarm to ring
+                ringing = true;
+                // reset alarmTime to 0
+                alarmTime = 0;
 
-            // reset alarmTime to 0
-            alarmTime = 0;
+                // OBSERVER PATTERN STUFF: notify the registered listeners
+                NapTimerEvent event = new NapTimerEvent(this, initialDelay);
+                for(NapTimerListener listener : registeredListeners) {
+                    listener.alarmRaised(event);
+                }
+            }
         }
+    }
+
+    // OBSERVER PATTERN STUFF
+
+    /**
+     * The NapTimer is the Subject in the Observer Design Pattern.
+     * {@link NapTimerListener} defines the interface for the Observer in the
+     * pattern. This method registers a NapTimerListener to be notified when
+     * the alarm is raised.
+     *
+     * The {@link NapTimerListener} that should be notified when the alarm
+     * is raised on this {@link NapTimer}.
+     */
+    public void registerNapTimerListener(NapTimerListener listener) {
+        registeredListeners.add(listener);
+    }
+
+    /**
+     * Deregisters a {@link NapTimerListener} so that it will no longer be
+     * notified when the alarm is raised on this NapTimer (see
+     * {@link #registerNapTimerListener(NapTimerListener)}).
+     *
+     * @param listener The {@link NapTimerListener} that should be
+     *                 deregistered.
+     */
+    public void deregisterNapTimerListener(NapTimerListener listener) {
+        registeredListeners.remove(listener);
     }
 }
