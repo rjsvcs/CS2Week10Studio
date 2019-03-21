@@ -8,6 +8,8 @@ import naptimer.NapTimerObserver;
 /**
  * A napper that observes a {@link NapTimer} waiting for a
  * {@link NapTimerEvent} before rousing from its sleep.
+ *
+ * This is a ConcreteObserver in the ObserverDesignPattern.
  */
 public class ObservingNapper implements NapTimerObserver {
     /**
@@ -29,7 +31,7 @@ public class ObservingNapper implements NapTimerObserver {
      *
      * @param timer The {@link NapTimer} that will rouse the napper from
      *              sleep when it raises an alarm.
-     * @param durationInSeconds
+     * @param durationInSeconds The duration of the nap.
      */
     public synchronized void goToSleep(NapTimer timer, int durationInSeconds) {
         timer.registerNapTimerObserver(this);
