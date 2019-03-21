@@ -1,10 +1,10 @@
-package naps;
+package naptimer;
 
 import java.util.HashSet;
 import java.util.Set;
 
 /**
- * A timer for naps. Can be set to delay for a certain number of hours,
+ * A timer for naptimer. Can be set to delay for a certain number of hours,
  * minutes and seconds. The timer is the Subject in the Observer design
  * pattern: it notifies any registered Observers when a set alarm expires.
  */

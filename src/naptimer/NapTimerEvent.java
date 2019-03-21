@@ -1,4 +1,4 @@
-package naps;
+package naptimer;
 
 /**
  * An event indicating that a {@link NapTimer NapTimer's} alarm has gone off.

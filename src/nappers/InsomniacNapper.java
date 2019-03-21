@@ -1,4 +1,6 @@
-package naps;
+package nappers;
+
+import naptimer.NapTimer;
 
 /**
  * A napper that wakes up every second to see if the alarm on its

@@ -1,4 +1,8 @@
-package naps;
+package nappers;
+
+import naptimer.NapTimer;
+import naptimer.NapTimerEvent;
+import naptimer.NapTimerObserver;
 
 public class SnoozingNapper implements NapTimerObserver {
     private final NapTimer timer;

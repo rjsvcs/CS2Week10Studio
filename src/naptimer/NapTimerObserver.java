@@ -1,4 +1,4 @@
-package naps;
+package naptimer;
 
 /**
  * The interface implemented by any class that should be notified when a
