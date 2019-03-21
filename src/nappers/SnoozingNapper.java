@@ -1,14 +1,14 @@
 package nappers;
 
-import naptimer.NapTimer;
+import naptimer.SimpleNapTimer;
 import naptimer.NapTimerEvent;
 import naptimer.NapTimerObserver;
 
 public class SnoozingNapper implements Runnable, NapTimerObserver {
-    private final NapTimer timer;
+    private final SimpleNapTimer timer;
     private int snoozes;
 
-    public SnoozingNapper(NapTimer timer) {
+    public SnoozingNapper(SimpleNapTimer timer) {
         this.timer = timer;
         snoozes = 3;
         timer.registerNapTimerObserver(this);
@@ -29,7 +29,7 @@ public class SnoozingNapper implements Runnable, NapTimerObserver {
     public synchronized void alarmRaised(NapTimerEvent event) {
         System.out.println("Alarm goes off!");
         if(snoozes > 0) {
-            timer.setAlarm(0, 0, 5);
+            timer.setAlarm(5);
             System.out.println("Snoozer presses the snooze button...");
             snoozes--;
         } else {
@@ -38,17 +38,13 @@ public class SnoozingNapper implements Runnable, NapTimerObserver {
     }
 
     public static void main(String[] args) {
-        int hours = 0;
-        int minutes = 0;
-        int seconds = 5;
-
-        NapTimer timer = new NapTimer();
+        SimpleNapTimer timer = new SimpleNapTimer();
         Thread thread = new Thread(timer);
         thread.setDaemon(true);
         thread.start();
 
         new Thread(new SnoozingNapper(timer)).start();
 
-        timer.setAlarm(hours, minutes, seconds);
+        timer.setAlarm(4);
     }
 }

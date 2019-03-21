@@ -1,153 +1,56 @@
 package naptimer;
 
-import java.util.HashSet;
-import java.util.Set;
-
 /**
- * A timer for naptimer. Can be set to delay for a certain number of hours,
- * minutes and seconds. The timer is the Subject in the Observer design
- * pattern: it notifies any registered Observers when a set alarm expires.
+ * The interface for a class that can be used to set an alarm timer.
+ *
+ * This is the SubjectInterface in the Observer Design Pattern. It defines the
+ * methods to register and deregister Observers that should be notified when
+ * an alarm is raised.
  */
-public class NapTimer implements Runnable {
+public interface NapTimer extends Runnable {
     /**
-     * A constant used to convert seconds to milliseconds.
+     * Does the following:
+     * <ul>
+     *     <li>If the alarm is currently ringing, the ringer is stopped.</li>
+     *     <li>If the alarm timer is currently set, disables the alarm.</li>
+     *     <li>If neither of the above two conditions is true, has no
+     *     effect</li>
+     * </ul>
      */
-    private static final long SECOND = 1000;
+    public void turnOff();
 
     /**
-     * A constant used to convert minutes to milliseconds.
-     */
-    private static final long MINUTE = SECOND * 60;
-
-    /**
-     * A constant used to convert hours to milliseconds.
-     */
-    private static final long HOUR = MINUTE * 60;
-
-    /**
-     * The time at which the alarm will be raised (or 0 if there is no alarm).
-     */
-    private long alarmTime;
-
-    /**
-     * Flag that indicates whether or not the alarm is currently ringing.
-     */
-    private boolean ringing;
-
-    // OBSERVER PATTERN STUFF
-
-    /**
-     * The NapTimer is the Subject in the Observer Design Pattern.
-     * {@link NapTimerObserver} defines the interface for Observers. This set
-     * keeps track of the registered Observers.
-     */
-    private final Set<NapTimerObserver> registeredListeners;
-
-    /**
-     * Creates a new {@link NapTimer}.
-     */
-    public NapTimer() {
-        registeredListeners = new HashSet<>();
-        turnOff();
-    }
-
-    /**
-     * Used to check to see if the alarm is currently going off.
+     * Sets the alarm to go off after the specified number of seconds.
      *
-     * @return True if the alarm is ringing, false otherwise.
+     * @param delayInSeconds The number of seconds to wait before the alarm is
+     *                       raised.
      */
-    public synchronized boolean isRinging() {
-        return ringing;
-    }
+    public void setAlarm(int delayInSeconds);
 
     /**
-     * Turns the alarm off.
-     */
-    public synchronized void turnOff() {
-        ringing = false;
-        alarmTime = 0;
-        notify();
-    }
-
-    /**
-     * Sets the alarm to the specified delay.
+     * Returns true if the alarm is currently ringing. False otherwise.
      *
-     * @param hours The number of hours to delay the alarm.
-     * @param minutes The number of seconds to delay the alarm.
-     * @param seconds The number of minutes to delay the alarm.
+     * @return True if the alarm is currently ringing. Otherwise, returns
+     * false.
      */
-    public synchronized void setAlarm(int hours, int minutes, int seconds) {
-        long delay = hours * HOUR + minutes * MINUTE + seconds * SECOND;
-        alarmTime = System.currentTimeMillis() + delay;
-        ringing = false;
-        notify();
-    }
+    public boolean isRinging();
 
     /**
-     * The {@link NapTimer NapTimer's} standard loop. If no alarm has been
-     * set, it waits for the alarm to be set. Otherwise, it counts down by
-     * seconds until the delay elapses. Once the delay time elapses, the alarm
-     * is raised and any observers are notified.
-     */
-    @Override
-    public synchronized void run() {
-        while(true) {
-            // check to make sure that the alarm has been set
-            while(alarmTime <= System.currentTimeMillis()) {
-                try {
-                    wait();
-                } catch (InterruptedException e) {
-                    // squash
-                }
-            }
-
-            while(System.currentTimeMillis() < alarmTime) {
-                try {
-                    wait(1000);
-                } catch (InterruptedException e) {
-                    // squash
-                }
-            }
-
-            if(alarmTime > 0) {
-                NapTimerEvent event = new NapTimerEvent(this, alarmTime);
-                // set the alarm to ring
-                ringing = true;
-                // reset alarmTime to 0
-                alarmTime = 0;
-
-                // notify listeners
-                for(NapTimerObserver listener : registeredListeners) {
-                    listener.alarmRaised(event);
-                }
-            }
-        }
-    }
-
-    // OBSERVER PATTERN STUFF
-
-    /**
-     * The NapTimer is the Subject in the Observer Design Pattern.
-     * {@link NapTimerObserver} defines the interface for the Observer in the
-     * pattern. This method registers a NapTimerObserver to be notified when
-     * the alarm is raised.
+     * Registers the specified {@link NapTimerObserver} to be notified when an
+     * alarm is raised by this NapTimer.
      *
-     * The {@link NapTimerObserver} that should be notified when the alarm
-     * is raised on this {@link NapTimer}.
+     * @param observer The {@link NapTimerObserver} that will observe this
+     *                 NapTimer.
      */
-    public void registerNapTimerObserver(NapTimerObserver listener) {
-        registeredListeners.add(listener);
-    }
+    public void registerNapTimerObserver(NapTimerObserver observer);
 
     /**
-     * Deregisters a {@link NapTimerObserver} so that it will no longer be
-     * notified when the alarm is raised on this NapTimer (see
-     * {@link #registerNapTimerObserver(NapTimerObserver)}).
+     * Deregisters the specified {@link NapTimerObserver} so that it is no
+     * longer notified when an alarm is raised  by this NapTimer.
      *
-     * @param listener The {@link NapTimerObserver} that should be
-     *                 deregistered.
+     * @param observer The {@link NapTimerObserver} that should no longer
+     *                 observe this NapTimer.
      */
-    public void deregisterNapTimerObserver(NapTimerObserver listener) {
-        registeredListeners.remove(listener);
-    }
+    public void deregisterNapTimerObserver(NapTimerObserver observer);
+
 }

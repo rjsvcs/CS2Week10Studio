@@ -1,6 +1,6 @@
 package nappers;
 
-import naptimer.NapTimer;
+import naptimer.SimpleNapTimer;
 import naptimer.NapTimerEvent;
 import naptimer.NapTimerObserver;
 
@@ -25,11 +25,7 @@ public class ObservingNapper implements Runnable, NapTimerObserver {
     }
 
     public static void main(String[] args) {
-        int hours = 0;
-        int minutes = 0;
-        int seconds = 10;
-
-        NapTimer timer = new NapTimer();
+        SimpleNapTimer timer = new SimpleNapTimer();
         Thread thread = new Thread(timer);
         thread.setDaemon(true);
         thread.start();
@@ -37,7 +33,7 @@ public class ObservingNapper implements Runnable, NapTimerObserver {
         ObservingNapper napper = new ObservingNapper();
         timer.registerNapTimerObserver(napper);
 
-        timer.setAlarm(hours, minutes, seconds);
+        timer.setAlarm(10);
 
         new Thread(napper).start();
 

@@ -1,13 +1,14 @@
 package nappers;
 
 import naptimer.NapTimer;
+import naptimer.SimpleNapTimer;
 
 /**
  * A napper that wakes up every second to see if the alarm on its
- * {@link NapTimer} has been raised yet, and if not, goes back to sleep. An
+ * {@link SimpleNapTimer} has been raised yet, and if not, goes back to sleep. An
  * example of polling.
  */
-public class InsomniacNapper implements Runnable {
+public class InsomniacNapper {
     /**
      * The {@link NapTimer} being used to wake the napper.
      */
@@ -26,8 +27,7 @@ public class InsomniacNapper implements Runnable {
      * Checks to see if the alarm has started ringing once every second. This
      * results in lots of lost sleep!
      */
-    @Override
-    public void run() {
+    public void sleep() {
         while(!timer.isRinging()) {
             System.out.println("Woke up...alarm not ringing...going back " +
                     "to sleep...");
@@ -41,23 +41,20 @@ public class InsomniacNapper implements Runnable {
     }
 
     /**
-     * Creates a new {@link NapTimer} and InsomniacNapper. The sleeper polls
+     * Creates a new {@link SimpleNapTimer} and InsomniacNapper. The sleeper polls
      * to check to see if the alarm has gone off.
      *
      * @param args The
      */
     public static void main(String[] args) {
-        int hours = 0;
-        int minutes = 0;
-        int seconds = 4;
-
-        NapTimer timer = new NapTimer();
+        NapTimer timer = new SimpleNapTimer();
         Thread thread = new Thread(timer);
         thread.setDaemon(true);
         thread.start();
 
-        timer.setAlarm(hours, minutes, seconds);
+        timer.setAlarm(4);
 
-        new Thread(new InsomniacNapper(timer)).start();
+        InsomniacNapper napper = new InsomniacNapper(timer);
+        napper.sleep();
     }
 }

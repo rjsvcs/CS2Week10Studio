@@ -2,6 +2,7 @@ package naptimer;
 
 /**
  * An event indicating that a {@link NapTimer NapTimer's} alarm has gone off.
+ *
  * This is the EventObject in the Observer design pattern. It is used by the
  * Subject to notify any registered Observers when an alarm has expired.
  */
@@ -12,12 +13,12 @@ public class NapTimerEvent {
     private final NapTimer timer;
 
     /**
-     * The initial delay that was set on the {@link NapTimer}.
+     * The time that the {@link NapTimer} raised the alarm (in milliseconds).
      */
     private final long alarmTime;
 
     /**
-     * Creates a new {@link NapTimerEvent} with the specified alarm and delay.
+     * Creates a new {@link NapTimerEvent} with the specified alarm and time.
      *
      * @param timer The {@link NapTimer} that has raised an alarm.
      * @param alarmTime The time that the alarm was raised (in milliseconds).
