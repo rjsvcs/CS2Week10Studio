@@ -89,7 +89,7 @@ public class SimpleNapTimer implements NapTimer, Runnable {
                 ringing = true;
 
                 // OBSERVER STUFF: notify listeners
-                NapTimerEvent event = new NapTimerEvent(this, alarmTime);
+                NapTimerEvent event = new NapTimerEvent(this);
                 for(NapTimerObserver listener : registeredListeners) {
                     listener.alarmRaised(event);
                 }

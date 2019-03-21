@@ -13,19 +13,12 @@ public class NapTimerEvent {
     private final NapTimer timer;
 
     /**
-     * The time that the {@link NapTimer} raised the alarm (in milliseconds).
-     */
-    private final long alarmTime;
-
-    /**
      * Creates a new {@link NapTimerEvent} with the specified alarm and time.
      *
      * @param timer The {@link NapTimer} that has raised an alarm.
-     * @param alarmTime The time that the alarm was raised (in milliseconds).
      */
-    public NapTimerEvent(NapTimer timer, long alarmTime) {
+    public NapTimerEvent(NapTimer timer) {
         this.timer = timer;
-        this.alarmTime = alarmTime;
     }
 
     /**
@@ -35,14 +28,5 @@ public class NapTimerEvent {
      */
     public NapTimer getNapTimer() {
         return timer;
-    }
-
-    /**
-     * Returns the time that the alarm was raised in milliseconds.
-     *
-     * @return The time that the alarm was raised in milliseconds.
-     */
-    public long getAlarmTime() {
-        return alarmTime;
     }
 }

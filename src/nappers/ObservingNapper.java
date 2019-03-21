@@ -21,7 +21,7 @@ public class ObservingNapper implements NapTimerObserver {
      */
     @Override
     public synchronized void alarmRaised(NapTimerEvent event) {
-        System.out.println("An alarm went off: " + event.getAlarmTime());
+        System.out.println("An alarm went off!");
         notify();
     }
 
