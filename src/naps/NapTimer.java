@@ -43,10 +43,10 @@ public class NapTimer implements Runnable {
 
     /**
      * The NapTimer is the Subject in the Observer Design Pattern.
-     * {@link NapTimerListener} defines the interface for Observers. This set
+     * {@link NapTimerObserver} defines the interface for Observers. This set
      * keeps track of the registered Observers.
      */
-    private final Set<NapTimerListener> registeredListeners;
+    private final Set<NapTimerObserver> registeredListeners;
 
     /**
      * Creates a new {@link NapTimer}.
@@ -93,7 +93,7 @@ public class NapTimer implements Runnable {
      * Snoozes the alarm.
      */
     public synchronized void snooze() {
-        setAlarm(0, 0, 0);
+        setAlarm(0, 0, 9);
     }
 
     /**
@@ -123,14 +123,16 @@ public class NapTimer implements Runnable {
             }
 
             if(initialDelay > 0) {
+                NapTimerEvent event = new NapTimerEvent(this, initialDelay);
                 // set the alarm to ring
                 ringing = true;
                 // reset alarmTime to 0
                 alarmTime = 0;
+                // reset the alarm
+                initialDelay = 0;
 
-                // OBSERVER PATTERN STUFF: notify the registered listeners
-                NapTimerEvent event = new NapTimerEvent(this, initialDelay);
-                for(NapTimerListener listener : registeredListeners) {
+                // notify listeners
+                for(NapTimerObserver listener : registeredListeners) {
                     listener.alarmRaised(event);
                 }
             }
@@ -141,26 +143,26 @@ public class NapTimer implements Runnable {
 
     /**
      * The NapTimer is the Subject in the Observer Design Pattern.
-     * {@link NapTimerListener} defines the interface for the Observer in the
-     * pattern. This method registers a NapTimerListener to be notified when
+     * {@link NapTimerObserver} defines the interface for the Observer in the
+     * pattern. This method registers a NapTimerObserver to be notified when
      * the alarm is raised.
      *
-     * The {@link NapTimerListener} that should be notified when the alarm
+     * The {@link NapTimerObserver} that should be notified when the alarm
      * is raised on this {@link NapTimer}.
      */
-    public void registerNapTimerListener(NapTimerListener listener) {
+    public void registerNapTimerObserver(NapTimerObserver listener) {
         registeredListeners.add(listener);
     }
 
     /**
-     * Deregisters a {@link NapTimerListener} so that it will no longer be
+     * Deregisters a {@link NapTimerObserver} so that it will no longer be
      * notified when the alarm is raised on this NapTimer (see
-     * {@link #registerNapTimerListener(NapTimerListener)}).
+     * {@link #registerNapTimerObserver(NapTimerObserver)}).
      *
-     * @param listener The {@link NapTimerListener} that should be
+     * @param listener The {@link NapTimerObserver} that should be
      *                 deregistered.
      */
-    public void deregisterNapTimerListener(NapTimerListener listener) {
+    public void deregisterNapTimerObserver(NapTimerObserver listener) {
         registeredListeners.remove(listener);
     }
 }

@@ -5,7 +5,7 @@ package naps;
  * {@link NapTimer} has raised an alarm. This is the Observer in the Observer
  * design pattern.
  */
-public interface NapTimerListener {
+public interface NapTimerObserver {
     /**
      * Called when an observed {@link NapTimer} raises an alarm.
      *
