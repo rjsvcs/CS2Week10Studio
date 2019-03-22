@@ -11,7 +11,7 @@ import naptimer.NapTimerObserver;
  *
  * This is a ConcreteObserver in the ObserverDesignPattern.
  */
-public class ObservingNapper implements NapTimerObserver {
+public class ObservantNapper implements NapTimerObserver {
     /**
      * Wakes the sleeper when the {@link NapTimerEvent} is sent.
      *
@@ -54,7 +54,7 @@ public class ObservingNapper implements NapTimerObserver {
         thread.setDaemon(true);
         thread.start();
 
-        ObservingNapper napper = new ObservingNapper();
+        ObservantNapper napper = new ObservantNapper();
         napper.goToSleep(timer, 5);
     }
 }
