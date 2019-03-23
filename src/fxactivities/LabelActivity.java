@@ -1,4 +1,4 @@
-package fxexamples;
+package fxactivities;
 
 import javafx.application.Application;
 import javafx.geometry.Insets;
@@ -7,7 +7,7 @@ import javafx.scene.control.Label;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
-public class SimpleLabel extends Application {
+public class LabelExample extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         Label label = new Label("This is my label and it's suuuuuuper long.");
