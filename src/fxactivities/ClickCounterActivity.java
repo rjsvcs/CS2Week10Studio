@@ -9,7 +9,7 @@ import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
-public class ClickCounter extends Application {
+public class ClickCounterActivity extends Application {
     private int clickCount;
 
     @Override
@@ -28,10 +28,7 @@ public class ClickCounter extends Application {
             counter.setText(Integer.toString(clickCount));
         });
 
-        vbox.getChildren().addAll(
-          counter,
-          clicker
-        );
+        vbox.getChildren().addAll( counter, clicker );
 
         stage.setTitle("Click Counter");
         stage.setScene(new Scene(vbox));

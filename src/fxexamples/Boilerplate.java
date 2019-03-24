@@ -1,4 +1,4 @@
-package fxamples;
+package fxexamples;
 
 import javafx.application.Application;
 import javafx.stage.Stage;

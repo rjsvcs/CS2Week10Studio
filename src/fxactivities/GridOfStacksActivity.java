@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class GridOfStacks extends Application {
+public class GridOfStacksActivity extends Application {
     /**
      * Used to pick a random value from a selection of images.
      */
@@ -20,7 +20,7 @@ public class GridOfStacks extends Application {
     /**
      * The path to the images.
      */
-    private static final String PATH = "file:images/smiley/";
+    private static final String PATH = "file:media/images/emojis/";
 
     /**
      * Available head images.

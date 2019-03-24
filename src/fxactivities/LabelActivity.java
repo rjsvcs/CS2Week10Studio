@@ -7,10 +7,10 @@ import javafx.scene.control.Label;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
-public class LabelExample extends Application {
+public class LabelActivity extends Application {
     @Override
     public void start(Stage stage) throws Exception {
-        Label label = new Label("This is my label and it's suuuuuuper long.");
+        Label label = new Label("This is my label.");
         label.setFont(new Font("Courier New", 72));
         label.setPadding(new Insets(20));
         Scene scene = new Scene(label);
