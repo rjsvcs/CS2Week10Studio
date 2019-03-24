@@ -2,49 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7779b66a-0373-408f-84b9-f084a066b598" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/fxactivities/ClickCounterActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/fxactivities/GridOfStacksActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/fxactivities/StackPaneActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/CS2Week10Studio.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CS2Week10Studio.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/blackpiece.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/images/blackpiece.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/smiley/background.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/smiley/browsangry.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/images/emojis/browsangry.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/smiley/browsbasic.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/images/emojis/browsbasic.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/smiley/browshuh.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/images/emojis/browshuh.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/smiley/browsworried.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/images/emojis/browsworried.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/smiley/eyesblack.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/images/emojis/eyesblack.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/smiley/eyesblue.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/images/emojis/eyesblue.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/smiley/eyesbrown.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/images/emojis/eyesbrown.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/smiley/eyesgreen.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/images/emojis/eyesgreen.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/smiley/headblue.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/images/emojis/headblue.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/smiley/headgreen.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/images/emojis/headgreen.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/smiley/headred.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/images/emojis/headred.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/smiley/headyellow.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/images/emojis/headyellow.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/smiley/mouthbasic.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/images/emojis/mouthbasic.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/smiley/mouthdelerious.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/images/emojis/mouthdelerious.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/smiley/mouthhm.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/images/emojis/mouthhm.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/smiley/mouthohno.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/images/emojis/mouthohno.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/smiley/noseblue.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/images/emojis/noseblue.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/smiley/nosegreen.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/images/emojis/nosegreen.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/smiley/noseorange.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/images/emojis/noseorange.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/smiley/nosered.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/images/emojis/nosered.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/whitepiece.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/images/whitepiece.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS2Week10Studio/fxactivities/BorderPaneActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS2Week10Studio/fxactivities/BorderPaneActivity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS2Week10Studio/fxactivities/ClickCounter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS2Week10Studio/fxactivities/LabelActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS2Week10Studio/fxactivities/LabelActivity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS2Week10Studio/fxexamples/StackPaneExample.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fxactivities/BorderPaneActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxactivities/BorderPaneActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fxactivities/ClickCounter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fxactivities/GridOfStacks.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fxactivities/HBoxActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxactivities/HBoxActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fxactivities/LabelActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxactivities/LabelActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fxactivities/VBoxActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxactivities/VBoxActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fxexamples/Boilerplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxexamples/Boilerplate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fxexamples/BorderPaneExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxexamples/BorderPaneExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fxexamples/ButtonExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxexamples/ButtonExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fxexamples/GridPaneExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxexamples/GridPaneExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fxexamples/StackPaneExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fxactivities/StackPaneActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxactivities/StackPaneActivity.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,104 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/fxactivities/StackPaneActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="21" lean-forward="true" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fxactivities/LabelActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="49" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fxactivities/VBoxActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="16" selection-end-column="10" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fxactivities/HBoxActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="16" selection-end-column="10" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fxactivities/ClickCounterActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="22" column="53" selection-start-line="11" selection-end-line="36" selection-end-column="1" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fxactivities/BorderPaneActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="21" column="62" selection-start-line="21" selection-start-column="62" selection-end-line="21" selection-end-column="62" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fxactivities/GridOfStacksActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="22" column="51" selection-start-line="22" selection-start-column="51" selection-end-line="22" selection-end-column="51" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/nappers/ObservantNapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="33">
-              <caret line="21" selection-start-line="21" selection-end-line="48" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/nappers/SnoozingNapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="30" column="50" selection-start-line="30" selection-start-column="50" selection-end-line="30" selection-end-column="50" />
+            <state relative-caret-position="391">
+              <caret line="26" column="21" lean-forward="true" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -248,6 +111,13 @@
             <path>
               <item name="CS2Week10Studio" type="b2602c69:ProjectViewProjectNode" />
               <item name="CS2Week10Studio" type="462c0819:PsiDirectoryNode" />
+              <item name="media" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="emojis" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CS2Week10Studio" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CS2Week10Studio" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -289,7 +159,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553442088628" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553444704529" />
     <property name="last_opened_file_path" value="$USER_HOME$/javafx-sdk-11.0.1/lib" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="/usr/local/bin/node" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -328,7 +198,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.StackPaneActivity">
+  <component name="RunManager" selected="Application.GridOfStacksActivity">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -445,8 +315,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.StackPaneActivity" />
         <item itemvalue="Application.GridOfStacksActivity" />
+        <item itemvalue="Application.StackPaneActivity" />
         <item itemvalue="Application.BorderPaneActivity" />
         <item itemvalue="Application.ClickCounterActivity" />
         <item itemvalue="Application.VBoxActivity" />
@@ -466,7 +336,7 @@
       <workItem from="1553014264264" duration="643000" />
       <workItem from="1553168741346" duration="12856000" />
       <workItem from="1553349266731" duration="1532000" />
-      <workItem from="1553350954554" duration="16325000" />
+      <workItem from="1553350954554" duration="17306000" />
     </task>
     <servers />
   </component>
@@ -482,7 +352,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31356000" />
+    <option name="totallyTimeSpent" value="32337000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -497,14 +367,14 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.38353196" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.38353196" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32936078" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32936078" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32936078" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
@@ -670,7 +540,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fxactivities/ClickCounterActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
+        <state relative-caret-position="214">
           <caret line="22" column="53" selection-start-line="11" selection-end-line="36" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -690,8 +560,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fxactivities/GridOfStacksActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="22" column="51" selection-start-line="22" selection-start-column="51" selection-end-line="22" selection-end-column="51" />
+        <state relative-caret-position="272">
+          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="22" selection-end-column="67" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -700,8 +570,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fxactivities/StackPaneActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="21" lean-forward="true" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
+        <state relative-caret-position="391">
+          <caret line="26" column="21" lean-forward="true" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

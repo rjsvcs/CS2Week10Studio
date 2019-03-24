@@ -18,13 +18,15 @@ public class StackPaneActivity extends Application {
         ImageView mouth = new ImageView(PATH + "mouthbasic.png");
         ImageView nose = new ImageView(PATH + "nosered.png");
         ImageView eyes = new ImageView(PATH + "eyesblack.png");
+        ImageView brows = new ImageView(PATH + "browsbasic.png");
 
         StackPane pane = new StackPane();
         pane.getChildren().addAll(
                 head,
                 mouth,
                 nose,
-                eyes
+                eyes,
+                brows
         );
 
         stage.setTitle("Stack Pane Example");

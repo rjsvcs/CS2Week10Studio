@@ -45,6 +45,14 @@ public class GridOfStacksActivity extends Application {
 
 
     /**
+     * Available eyebrow images.
+     */
+    private static final String[] BROWS = {
+            "browsbasic.png", "browsangry.png", "browshuh.png",
+            "browsworried.png"
+    };
+
+    /**
      * Available mouth images.
      */
     private static final String[] MOUTHS = {
@@ -61,10 +69,11 @@ public class GridOfStacksActivity extends Application {
                 ImageView head = makeRandomImage(HEADS);
                 ImageView nose = makeRandomImage(NOSES);
                 ImageView eyes = makeRandomImage(EYES);
+                ImageView brows = makeRandomImage(BROWS);
                 ImageView mouth = makeRandomImage(MOUTHS);
 
                 StackPane stack = new StackPane();
-                stack.getChildren().addAll(head, nose, eyes, mouth);
+                stack.getChildren().addAll(head, nose, eyes, brows, mouth);
                 gridPane.add(stack, row, col);
             }
         }
