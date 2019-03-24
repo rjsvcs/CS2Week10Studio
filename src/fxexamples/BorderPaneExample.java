@@ -9,6 +9,7 @@ import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.CornerRadii;
 import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 public class BorderPaneExample extends Application {
@@ -39,9 +40,12 @@ public class BorderPaneExample extends Application {
      */
     private static Label makeLabel(String text, Color background) {
         Label label = new Label(text);
+        label.setFont(new Font("Courier New", 24));
         label.setPadding(new Insets(20));
         label.setBackground(new Background(new BackgroundFill(background,
                 CornerRadii.EMPTY, Insets.EMPTY)));
+        label.setMaxHeight(Double.MAX_VALUE);
+        label.setMaxWidth(Double.MAX_VALUE);
         return label;
     }
 }

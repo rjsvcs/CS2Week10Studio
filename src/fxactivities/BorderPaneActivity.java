@@ -34,6 +34,8 @@ public class BorderPaneActivity extends Application {
         label.setPadding(new Insets(20));
         label.setBackground(new Background(new BackgroundFill(background,
                 CornerRadii.EMPTY, Insets.EMPTY)));
+        label.setMaxWidth(Double.MAX_VALUE);
+        label.setMaxHeight(Double.MAX_VALUE);
         return label;
     }
 }

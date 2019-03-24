@@ -11,9 +11,9 @@ public class HBoxActivity extends Application {
     public void start(Stage stage) {
         HBox hbox = new HBox();
         hbox.getChildren().addAll(
-          new Button("Left"),
-          new Button("Middle"),
-          new Button("Right")
+          new Button("Left Left Left"),
+          new Button("Middle Middle\nMiddle Middle"),
+          new Button("Right Right Right")
         );
 
         Scene scene = new Scene(hbox);

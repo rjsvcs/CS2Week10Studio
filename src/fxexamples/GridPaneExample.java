@@ -24,7 +24,7 @@ public class GridPaneExample extends Application {
         for(int row=0; row<5; row++) {
             for(int col=0; col<5; col++) {
                 Label label = makeLabel(row, col);
-                gridPane.add(label, row, col);
+                gridPane.add(label, col, row);
             }
         }
 
