@@ -15,6 +15,9 @@ public class RealClock implements Clock {
      */
     private final Set<ClockWatcher> observers;
 
+    /**
+     * Creates and starts a daemon thread to run this clock.
+     */
     public RealClock() {
         observers = new HashSet<>();
 
@@ -33,12 +36,18 @@ public class RealClock implements Clock {
         observers.remove(observer);
     }
 
+    /**
+     * Generates a {@link TickEvent} about once per second.
+     */
     private void tickTock() {
         while(true) {
+            // make the new event
             TickEvent event = new TickEvent(this, Calendar.getInstance());
+            // notify the registered observers
             for(ClockWatcher observer : observers) {
                 observer.handleTick(event);
             }
+            // sleep for about a second
             try {
                 Thread.sleep(950);
             } catch (InterruptedException e) {
