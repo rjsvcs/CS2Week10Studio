@@ -3,18 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7779b66a-0373-408f-84b9-f084a066b598" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS2Week10Studio/fxactivities/BorderPaneActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS2Week10Studio/fxactivities/BorderPaneActivity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS2Week10Studio/fxactivities/HBoxActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS2Week10Studio/fxactivities/HBoxActivity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS2Week10Studio/fxactivities/LabelActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS2Week10Studio/fxactivities/LabelActivity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS2Week10Studio/fxexamples/Boilerplate.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS2Week10Studio/fxexamples/Boilerplate.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS2Week10Studio/fxexamples/BorderPaneExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS2Week10Studio/fxexamples/BorderPaneExample.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS2Week10Studio/fxexamples/GridPaneExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS2Week10Studio/fxexamples/GridPaneExample.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fxactivities/BorderPaneActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxactivities/BorderPaneActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fxactivities/HBoxActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxactivities/HBoxActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fxactivities/LabelActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxactivities/LabelActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fxexamples/Boilerplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxexamples/Boilerplate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fxexamples/BorderPaneExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxexamples/BorderPaneExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fxexamples/GridPaneExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxexamples/GridPaneExample.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -108,7 +96,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/fxexamples/GridPaneExample.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
@@ -120,11 +108,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/fxactivities/StackPaneActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="13" lean-forward="true" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+            <state relative-caret-position="391">
+              <caret line="23" column="34" lean-forward="true" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -267,7 +255,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553455024400" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553554937842" />
     <property name="last_opened_file_path" value="$USER_HOME$/javafx-sdk-11.0.1/lib" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="/usr/local/bin/node" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -444,7 +432,7 @@
       <workItem from="1553014264264" duration="643000" />
       <workItem from="1553168741346" duration="12856000" />
       <workItem from="1553349266731" duration="1532000" />
-      <workItem from="1553350954554" duration="23754000" />
+      <workItem from="1553350954554" duration="25419000" />
     </task>
     <servers />
   </component>
@@ -460,11 +448,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38785000" />
+    <option name="totallyTimeSpent" value="40450000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1433902" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -475,14 +462,14 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.38353196" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.38353196" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32936078" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32936078" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32936078" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
@@ -596,16 +583,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fxactivities/StackPaneActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="13" lean-forward="true" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/fxexamples/Boilerplate.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -680,6 +657,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fxactivities/StackPaneActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="34" lean-forward="true" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
