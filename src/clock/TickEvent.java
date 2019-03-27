@@ -4,6 +4,8 @@ import java.util.Calendar;
 
 /**
  * An event indicating that a {@link Clock} has ticked.
+ *
+ * This is the Event Object in the Observer Design Pattern.
  */
 public class TickEvent {
     /**

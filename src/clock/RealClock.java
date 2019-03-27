@@ -6,8 +6,9 @@ import java.util.Set;
 
 /**
  * Provides a concrete implementation of the {@link Clock} interface.
- * Generates a {@link TickEvent} approximately once each second. The Real
- * Subject in the Observer Design Pattern.
+ * Generates a {@link TickEvent} approximately once each second.
+ *
+ * This is the Real Subject in the Observer Design Pattern.
  */
 public class RealClock implements Clock {
     /**

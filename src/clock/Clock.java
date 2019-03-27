@@ -1,8 +1,9 @@
 package clock;
 
 /**
- * The interface that must be implemented by a {@link Clock}. This is the
- * Subject Interface in the Observer Design Pattern.
+ * The interface that must be implemented by a {@link Clock}.
+ *
+ * This is the Subject Interface in the Observer Design Pattern.
  */
 public interface Clock {
     /**
